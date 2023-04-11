@@ -13,7 +13,7 @@ Field spreadsheet
 
 https://docs.google.com/spreadsheets/d/1HQusNHs3F8OHwEHfC1KsY_ELNWvIPmnpIsQmMLPuzaw/edit
 
-## JSON sent to C4C 
+## example of JSON sent to C4C 
 
 ```
 {
