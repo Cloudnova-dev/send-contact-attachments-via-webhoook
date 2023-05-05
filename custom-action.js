@@ -1,4 +1,3 @@
-//bmi uk
 /***************
 * Following the code of the custom coded action.
 * It's implied that the body of a default hubpot webhook is received from a previous action
@@ -38,10 +37,13 @@ exports.main = async (event, callback) => {
   webhookBody.attachments = attachments;
   const subsPref = await axios.get(`https://api.hubapi.com/communication-preferences/v3/status/email/${webhookBody.email}`, { headers: headers });
   webhookBody.subscriptionStatuses = subsPref.data.subscriptionStatuses;
-  // if (webhookBody.hubspot_owner_id != null) {
-  //   const ownerEmail = await axios.get(`https://api.hubapi.com/crm/v3/owners/${webhookBody.hubspot_owner_id}?idProperty=id&archived=false`, { headers: headers });
-  //   webhookBody.hubspot_owner_email = ownerEmail.data.email;
-  // }
+  /*if (webhookBody.hubspot_owner_id != null) {
+    const ownerEmail = await axios.get(`https://api.hubapi.com/crm/v3/owners/${webhookBody.hubspot_owner_id}?idProperty=id&archived=false`, { headers: headers });
+    webhookBody.contact_owner_crm = ownerEmail.data.email;
+  }
+  else {
+    webhookBody.contact_owner_crm = null;
+  }*/
   //console.log(ownerEmail.data.email);
 
 
